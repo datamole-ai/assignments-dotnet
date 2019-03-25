@@ -1,16 +1,15 @@
-﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace StreamProcessingService.Tests
+namespace Datamole.InterviewAssignments.StreamProcessingService.Tests
 {
     [TestClass]
     public class StreamServiceTests
     {
-        private const double EqualityThreshold = 1e-8;
+        private const double _equalityThreshold = 1e-8;
 
         [TestMethod]
         public void TestMethod1()
@@ -33,7 +32,7 @@ namespace StreamProcessingService.Tests
 
             // Assert
 
-            Assert.IsTrue(CompareDouble(expectedResult, result));
+            Assert.AreEqual(expectedResult, result, _equalityThreshold);
         }
 
         [TestMethod]
@@ -48,7 +47,7 @@ namespace StreamProcessingService.Tests
             var data1 = new MemoryStream(Encoding.UTF8.GetBytes("12;2.2\nppp\n\n\n1.1\n3.4;;"));
             var data2 = new MemoryStream(Encoding.UTF8.GetBytes("5;1\n\n;;0;"));
 
-            var dataStreams = new List<Stream> {data1, data2};
+            var dataStreams = new List<Stream> { data1, data2 };
 
             // Act
 
@@ -56,7 +55,7 @@ namespace StreamProcessingService.Tests
 
             // Assert
 
-            Assert.IsTrue(CompareDouble(expectedResult, result));
+            Assert.AreEqual(expectedResult, result, _equalityThreshold);
         }
 
         [TestMethod]
@@ -68,7 +67,7 @@ namespace StreamProcessingService.Tests
 
             var service = StreamServiceFactory.CreateService();
 
-            var data = new List<double> {12, 2.2, 1.1, 3.4, 5, 1, 0};
+            var data = new List<double> { 12, 2.2, 1.1, 3.4, 5, 1, 0 };
 
             // Act
 
@@ -76,7 +75,7 @@ namespace StreamProcessingService.Tests
 
             // Assert
 
-            Assert.IsTrue(CompareDouble(expectedResult, result));
+            Assert.AreEqual(expectedResult, result, _equalityThreshold);
         }
 
         [TestMethod]
@@ -101,10 +100,6 @@ namespace StreamProcessingService.Tests
             }
         }
 
-        private bool CompareDouble(double expectedResult, double result)
-        {
-            var limit = EqualityThreshold * expectedResult;
-            return Math.Abs(expectedResult - result) < limit;
-        }
+
     }
 }

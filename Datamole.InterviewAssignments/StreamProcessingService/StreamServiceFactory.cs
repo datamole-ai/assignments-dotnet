@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace StreamProcessingService
+namespace Datamole.InterviewAssignments.StreamProcessingService
 {
     public static class StreamServiceFactory
     {

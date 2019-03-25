@@ -100,4 +100,5 @@ pp p p
 ----
 
 * The input streams can be huge. The machine running this code has NOT enough RAM to keep not even one of these streams in the memory.
+* However, individual lines are relatively short. Multiple of them can fit into the memory at once.
 * Overall, the computation performed by this method is considered to be I/O-bound.

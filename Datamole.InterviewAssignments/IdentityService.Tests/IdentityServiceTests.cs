@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using IdentityService.Models;
+using Datamole.InterviewAssignments.IdentityService.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace IdentityService.Tests
+namespace Datamole.InterviewAssignments.IdentityService.Tests
 {
     [TestClass]
     public class IdentityServiceTests

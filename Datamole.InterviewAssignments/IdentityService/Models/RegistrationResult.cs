@@ -1,16 +1,15 @@
-﻿namespace IdentityService.Models
+namespace Datamole.InterviewAssignments.IdentityService.Models
 {
     public class RegistrationResult
     {
-        public bool IsSuccessful { get; }
-
-        public RegistrationError? Error { get; }
-
         private RegistrationResult(bool isSuccessful, RegistrationError? error = null)
         {
             IsSuccessful = isSuccessful;
             Error = error;
         }
+
+        public bool IsSuccessful { get; }
+        public RegistrationError? Error { get; }
 
         public static RegistrationResult Successful() => new RegistrationResult(true);
 

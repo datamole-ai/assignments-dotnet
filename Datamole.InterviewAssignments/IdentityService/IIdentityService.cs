@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using IdentityService.Models;
+using System.Collections.Generic;
+using Datamole.InterviewAssignments.IdentityService.Models;
 
-namespace IdentityService
+namespace Datamole.InterviewAssignments.IdentityService
 {
     public interface IIdentityService
     {
