@@ -53,6 +53,7 @@ Implementation of the method should take into an account following assumptions a
 
 * The outer collection (IEnumerable) can contain up to 512 inner streams.
 * The input streams can be huge. The machine running this code has NOT enough RAM to keep not even one of these streams in the memory.
+* However, individual lines are relatively short. Multiple of them can fit into the memory at once.
 * The input streams are expected to be waiting for I/O operations frequently (e.g. network or file stream).
 * The machine running this code has multiple cores (threads).
 * Overall, the computation performed by this method is considered to be I/O-bound.
