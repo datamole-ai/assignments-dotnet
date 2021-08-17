@@ -1,15 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "IdentityService\IdentityService.csproj", "{280CDD4A-B24B-4798-9064-1DC3929627C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService", "IdentityService\IdentityService.csproj", "{280CDD4A-B24B-4798-9064-1DC3929627C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamProcessingService", "StreamProcessingService\StreamProcessingService.csproj", "{0139E06D-29B7-4D98-B9C7-B398BD432FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamProcessingService", "StreamProcessingService\StreamProcessingService.csproj", "{0139E06D-29B7-4D98-B9C7-B398BD432FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService.Tests", "IdentityService.Tests\IdentityService.Tests.csproj", "{5A601287-9898-44E2-A35C-9F5D957557C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Tests", "IdentityService.Tests\IdentityService.Tests.csproj", "{5A601287-9898-44E2-A35C-9F5D957557C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamProcessingService.Tests", "StreamProcessingService.Tests\StreamProcessingService.Tests.csproj", "{5181066F-A40C-403D-9B5D-C9C98F19EA76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamProcessingService.Tests", "StreamProcessingService.Tests\StreamProcessingService.Tests.csproj", "{5181066F-A40C-403D-9B5D-C9C98F19EA76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C49CBC8-A682-4099-8EB3-C5F9C890A9B6}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{280CDD4A-B24B-4798-9064-1DC3929627C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +77,11 @@ Global
 		{5181066F-A40C-403D-9B5D-C9C98F19EA76}.Release|x64.Build.0 = Release|Any CPU
 		{5181066F-A40C-403D-9B5D-C9C98F19EA76}.Release|x86.ActiveCfg = Release|Any CPU
 		{5181066F-A40C-403D-9B5D-C9C98F19EA76}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEE19646-E4A8-4271-9B91-0C885271A2EE}
 	EndGlobalSection
 EndGlobal

@@ -1,12 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
-
     <AssemblyName>Datamole.InterviewAssignments.IdentityService.Tests</AssemblyName>
-
     <RootNamespace>Datamole.InterviewAssignments.IdentityService.Tests</RootNamespace>
   </PropertyGroup>
 

@@ -5,7 +5,7 @@ namespace Datamole.InterviewAssignments.IdentityService.Models
 {
     public class AuthenticationResult
     {
-        private AuthenticationResult(bool isSuccessful, AuthenticationError? error = null, string originalUserName = null, IDictionary<string, string> properties = null)
+        private AuthenticationResult(bool isSuccessful, AuthenticationError? error = null, string? originalUserName = null, IDictionary<string, string>? properties = null)
         {
             IsSuccessful = isSuccessful;
             Error = error;
@@ -14,9 +14,9 @@ namespace Datamole.InterviewAssignments.IdentityService.Models
         }
 
         public bool IsSuccessful { get; }
-        public IDictionary<string, string> Properties { get; }
+        public IDictionary<string, string>? Properties { get; }
         public AuthenticationError? Error { get; }
-        public string OriginalUserName { get; }
+        public string? OriginalUserName { get; }
 
         public static AuthenticationResult Successful(string originalUserName, IDictionary<string, string> properties)
         {

@@ -1,8 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Datamole.InterviewAssignments.StreamProcessingService.Tests
 {

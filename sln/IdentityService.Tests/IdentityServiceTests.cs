@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+
 using Datamole.InterviewAssignments.IdentityService.Models;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -17,7 +20,7 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
         {
             // Arrange
 
-            var service = IdentityServiceFactory.CreateFromMemory(new List<string> {"jsmith"}, new List<string> {"jane123."});
+            var service = IdentityServiceFactory.CreateFromMemory(new List<string> { "jsmith" }, new List<string> { "jane123." });
 
             // Act
 
@@ -39,7 +42,7 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
 
             Assert.IsTrue(result3.IsSuccessful);
             Assert.IsNull(result3.Error);
-            Assert.IsFalse(result3.Properties.Any());
+            Assert.IsFalse(result3.Properties?.Any());
 
             Assert.IsTrue(result4.IsSuccessful);
             Assert.IsNull(result4.Error);
@@ -53,7 +56,7 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
         {
             // Arrange
 
-            var service = IdentityServiceFactory.CreateFromMemory(new List<string> {"janeSmith"}, new List<string> {"john123."});
+            var service = IdentityServiceFactory.CreateFromMemory(new List<string> { "janeSmith" }, new List<string> { "john123." });
 
             var customProperties = new Dictionary<string, string>
             {
@@ -83,9 +86,9 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
             Assert.IsTrue(result3.IsSuccessful);
             Assert.IsNull(result3.Error);
             Assert.AreEqual("jSmith", result3.OriginalUserName);
-            Assert.AreEqual(2, result3.Properties.Count);
-            Assert.AreEqual(customProperties["Prop1"], result3.Properties["Prop1"]);
-            Assert.AreEqual(customProperties["Prop2"], result3.Properties["Prop2"]);
+            Assert.AreEqual(2, result3.Properties?.Count);
+            Assert.AreEqual(customProperties["Prop1"], result3.Properties?["Prop1"]);
+            Assert.AreEqual(customProperties["Prop2"], result3.Properties?["Prop2"]);
 
 
             Assert.IsTrue(result4.IsSuccessful);
@@ -111,7 +114,7 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
                 {"Prop2", "Val2"}
             };
 
-            var service1 = IdentityServiceFactory.CreateFromMemory(new List<string> {"jsmith"}, new List<string> {"jane123."});
+            var service1 = IdentityServiceFactory.CreateFromMemory(new List<string> { "jsmith" }, new List<string> { "jane123." });
 
             // Act
 
@@ -138,13 +141,13 @@ namespace Datamole.InterviewAssignments.IdentityService.Tests
             Assert.IsTrue(result4.IsSuccessful);
             Assert.IsTrue(result5.IsSuccessful);
             Assert.AreEqual("JaneSmith", result5.OriginalUserName);
-            Assert.IsFalse(result5.Properties.Any());
+            Assert.IsFalse(result5.Properties?.Any());
 
             Assert.IsTrue(result6.IsSuccessful);
             Assert.AreEqual("JaneSmithX", result6.OriginalUserName);
-            Assert.AreEqual(2, result6.Properties.Count);
-            Assert.AreEqual(customProperties["Prop1"], result6.Properties["Prop1"]);
-            Assert.AreEqual(customProperties["Prop2"], result6.Properties["Prop2"]);
+            Assert.AreEqual(2, result6.Properties?.Count);
+            Assert.AreEqual(customProperties["Prop1"], result6.Properties?["Prop1"]);
+            Assert.AreEqual(customProperties["Prop2"], result6.Properties?["Prop2"]);
 
             try
             {
