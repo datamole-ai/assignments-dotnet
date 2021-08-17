@@ -20,10 +20,13 @@ The goal is to implement a simple identity service which keeps its state in the 
     * Document any other assumption made by your implementation.
 
 ## Bonus task 1 (basic cryptography skills required)
-    * New assumption: The file used for persisting the state *might be leaked* to the unauthorized entities.
+
+New assumption: The file used for persisting the state *might be leaked* to the unauthorized entities.
 
 ## Bonus task 2 (intermediate cryptography skills required)
-    * New assumption: The user names are considered confidential.
+
+New assumption: The user names are considered confidential.
 
 ## Bonus task 3 (intermediate cryptography skills required)
-    * New assumption: The file used for persisting the state *might be writable* by the unauthorized entities. The consistency becomes a critical issue.
+
+New assumption: The file used for persisting the state *might be writable* by the unauthorized entities. The consistency becomes a critical issue.
